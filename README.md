@@ -1,34 +1,16 @@
 ## laravel + Vue js dashboard
-mini Project in Laravel and vue js. Real World Laravel 8x + vue js Dashboard.Task management and project management system. Dashboard features such as: Complete Dashboard, Custom Authentication, Email Verification, custom-login-register-forgot password (without jetstream).
-
+mini Project in Laravel and vue js. Laravel 8x + vue js Dashboard.Task management 
 ## How to use
-1. git clone `git clone https://github.com/hasmukh-dharajiya/laravel-vuejs-dashboard.git`
+1. git clone SSH `git clone git@github.com:HoanTV197/Task-Manager-System-.git`
 2. Copy `.env.example file to .env`
-3. Edit database credentials in .env file `DB_DATABASE=dashboard`
+3. Edit database credentials in .env file `DB_DATABASE=TaskManager`
 4. Run `composer install`
 5. Run `npm install`
 6. Run `php artisan key:generate`
 7. Run `php artisan migrate`
-8. Open `.env` file ang following code For send an Email using Gmail SMTP Server
-```
-MAIL_MAILER=smtp
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USERNAME=      #Your Email ID #
-MAIL_PASSWORD=      #Your Email Password #
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=  #Your Email ID #
-MAIL_FROM_NAME="${APP_NAME}"
-```
-9. Run `npm run dev`
-10. Run `php artisan ser` 
-11. `http://localhost:8000/`
-
-`Note`: Please make sure Turn ON `Less secure app access` in your Google account other wise Email Not Send !. [Click here..](https://myaccount.google.com/security)
-
-You should see the list of Data, something like this:
-
-![larave dashboard img](public/git_image/vue-dashboard.png)
+8. Run `npm run dev`
+9. Run `php artisan ser` 
+10. `http://localhost:8000/`
 
 ## Feature
 Key Feature of Project.
