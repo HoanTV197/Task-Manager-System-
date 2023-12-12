@@ -6,6 +6,8 @@
     <meta name="csrf-token" value="{{ csrf_token() }}" />
     <title>Vue JS Dash</title>
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" />
+    <script src="https://apis.google.com/js/api.js"></script>
+
 </head>
 <body>
 
@@ -17,6 +19,9 @@
 <script src="{{asset('assets/vendor/js-cookie/js.cookie.js')}}"></script>
 <script src="{{asset('assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
 <script src="{{asset('assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
+<script src="/dist/vue-add-to-calendar.min.js"></script>
+
+
 <!-- Argon JS -->
 <script src="{{asset('assets/js/argon.js?v=1.2.0')}}"></script>
 </body>

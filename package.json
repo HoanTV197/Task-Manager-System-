@@ -26,9 +26,15 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@fullcalendar/daygrid": "^6.1.9",
+        "@fullcalendar/vue": "^6.1.9",
+        "gapi-client": "^0.0.3",
+        "vue-add-to-calendar": "^1.0.7",
         "vue-axios": "^3.2.4",
+        "vue-chat-scroll": "^1.4.0",
         "vue-router": "^3.5.1",
         "vuejs-avataaars": "^4.0.1",
-        "vuesax": "^4.0.1-alpha.25"
+        "vuesax": "^4.0.1-alpha.25",
+        "whatwg-fetch": "^3.6.19"
     }
 }

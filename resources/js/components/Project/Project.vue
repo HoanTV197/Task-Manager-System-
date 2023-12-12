@@ -37,7 +37,7 @@
                                     <th scope="col" class="sort">Responsible User</th>
                                     <th scope="col" class="sort">Status</th>
                                     <th scope="col" class="sort">Completion</th>
-                                    <th scope="col" class="sort">Create At</th>
+                                    <!-- <th scope="col" class="sort">Create At</th> -->
                                     <th scope="col" class="sort">Action</th>
                                 </tr>
                                 </thead>
@@ -78,11 +78,11 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>
+                                    <!-- <td>
                                         <div class="d-flex align-items-center">
                                             <span class="completion mr-2">{{ item.created_at }}</span>
                                         </div>
-                                    </td>
+                                    </td> -->
                                     <td>
                                         <div style="display: inline-flex">
                                             <div>

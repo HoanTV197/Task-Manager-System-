@@ -700,20 +700,6 @@ var render = function() {
                               _c("td", [
                                 _c(
                                   "div",
-                                  { staticClass: "d-flex align-items-center" },
-                                  [
-                                    _c(
-                                      "span",
-                                      { staticClass: "completion mr-2" },
-                                      [_vm._v(_vm._s(item.created_at))]
-                                    )
-                                  ]
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("td", [
-                                _c(
-                                  "div",
                                   { staticStyle: { display: "inline-flex" } },
                                   [
                                     _c("div", [
@@ -1317,10 +1303,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { staticClass: "sort", attrs: { scope: "col" } }, [
           _vm._v("Completion")
-        ]),
-        _vm._v(" "),
-        _c("th", { staticClass: "sort", attrs: { scope: "col" } }, [
-          _vm._v("Create At")
         ]),
         _vm._v(" "),
         _c("th", { staticClass: "sort", attrs: { scope: "col" } }, [

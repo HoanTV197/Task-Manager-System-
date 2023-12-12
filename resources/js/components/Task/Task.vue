@@ -182,6 +182,7 @@
 </template>
 
 <script>
+
 export default {
     name: "Dashboard",
     data() {
@@ -238,7 +239,7 @@ export default {
                         document.getElementById("addTaskForm").reset();
                         Loading.close();
                         this.addTaskModel = false;
-                        this.getTask()
+                        this.getTask();
                     } else {
                         this.errorNotification(response.data.message)
                         Loading.close()
