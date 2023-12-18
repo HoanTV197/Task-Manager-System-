@@ -14,8 +14,14 @@ import 'vuesax/dist/vuesax.css';
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 
+import FullCalendar from '@fullcalendar/vue'
+import dayGridPlugin from '@fullcalendar/daygrid'
 import Helpers from "./components/Hepler/Helper";
 Vue.mixin(Helpers)
+
+//new 23/11/2023
+var AddToCalendar = require('vue-add-to-calendar');
+Vue.use(AddToCalendar);
 
 Vue.use(Vuesax);
 Vue.use(VueRouter);

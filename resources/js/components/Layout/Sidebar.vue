@@ -18,6 +18,14 @@
                                 <span class="nav-link-text">Dashboard</span>
                             </router-link>
                         </li>
+                        
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/calendar">
+                                <i class="fas fa-calendar-alt text-primary"></i> &nbsp; &nbsp;
+                                <span class="nav-link-text">Calendar</span>
+                            </router-link>
+                        </li>
+
                         <li class="nav-item">
                             <router-link class="nav-link" to="/project">
                                 <i class="fas fa-project-diagram text-primary"></i> &nbsp; &nbsp;
@@ -28,6 +36,12 @@
                             <router-link class="nav-link" to="/task">
                                 <i class="fas fa-tasks text-primary"></i> &nbsp; &nbsp;
                                 <span class="nav-link-text">Task</span>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/chats">
+                                <i class="fas fa-comments text-primary"></i> &nbsp; &nbsp;
+                                <span class="nav-link-text">FAQ</span>
                             </router-link>
                         </li>
                         <li class="nav-item">

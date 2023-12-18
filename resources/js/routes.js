@@ -59,6 +59,13 @@ export const routes = [
                 },
                 component:()=>import('./components/Dashboard/Dashboard'),
             },
+            {   path: '/calendar',
+                name: 'calendar',
+                meta: {
+                title: 'My Calendar | Vue Dashboard'
+                },
+                component:()=>import('./components/Calendar/Calendar'),
+            },
             {
                 path: '/project',
                 name: 'project',
@@ -74,6 +81,14 @@ export const routes = [
                     title: 'Task | Vue Dashboard'
                 },
                 component:()=>import('./components/Task/Task'),
+            },
+            {
+                path: '/chats',
+                name: 'chats',
+                meta: {
+                    title: 'Chast | Vue Dashboard'
+                },
+                component:()=>import('./components/Chats/Chats'),
             },
             {
                 path: '/profile',

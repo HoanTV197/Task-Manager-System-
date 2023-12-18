@@ -211,7 +211,7 @@ export default {
             editTaskModel: false,
             activeTooltip1: false,
             deleteDialog: false,
-            dataNotFound : false
+            dataNotFound : false,
         }
     },
     methods: {
@@ -238,7 +238,7 @@ export default {
                         document.getElementById("addTaskForm").reset();
                         Loading.close();
                         this.addTaskModel = false;
-                        this.getTask()
+                        this.getTask();
                     } else {
                         this.errorNotification(response.data.message)
                         Loading.close()
@@ -248,6 +248,8 @@ export default {
                     this.errorNotification(error.response.data.message)
                     Loading.close()
                 });
+                
+                
         },
         updateTask() {
             let Loading = this.block("editTaskForm");
