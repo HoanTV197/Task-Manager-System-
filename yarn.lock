@@ -890,17 +890,41 @@
   "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.4.tgz"
   "version" "5.15.4"
 
-"@fullcalendar/core@~6.1.9":
-  "integrity" "sha512-eeG+z9BWerdsU9Ac6j16rpYpPnE0wxtnEHiHrh/u/ADbGTR3hCOjCD9PxQOfhOTHbWOVs7JQunGcksSPu5WZBQ=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/core/-/core-6.1.9.tgz"
-  "version" "6.1.9"
+"@fullcalendar/core@~6.1.10", "@fullcalendar/core@~6.1.9":
+  "integrity" "sha512-oTXGJSAGpCf1oY+CKp5qYjMHkJCPBkJ3SHitl63n8Q6xKeiwQ4EF6Au451euUovREwJpLmD1AyZrCnWmtB9AVg=="
+  "resolved" "https://registry.npmjs.org/@fullcalendar/core/-/core-6.1.10.tgz"
+  "version" "6.1.10"
   dependencies:
     "preact" "~10.12.1"
 
-"@fullcalendar/daygrid@^6.1.9":
-  "integrity" "sha512-o/6joH/7lmVHXAkbaa/tUbzWYnGp/LgfdiFyYPkqQbjKEeivNZWF1WhHqFbhx0zbFONSHtrvkjY2bjr+Ef2quQ=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/daygrid/-/daygrid-6.1.9.tgz"
-  "version" "6.1.9"
+"@fullcalendar/daygrid@^6.1.9", "@fullcalendar/daygrid@~6.1.10":
+  "integrity" "sha512-Z4GRm1IyHKgxXFTWGcEI0nTsvYOIkpE0aMt3/o3ER2SZkF+hfwcDFhtj0c9+WhMjXFIWYeoTnA9rUOY7Zl/nxA=="
+  "resolved" "https://registry.npmjs.org/@fullcalendar/daygrid/-/daygrid-6.1.10.tgz"
+  "version" "6.1.10"
+
+"@fullcalendar/interaction@~6.1.10":
+  "integrity" "sha512-aZRlwCpmDasq2RNeWV0ub20Uevare9Cb6iMlxCacx0fhOC14H28G9d1FsduJIecInL84SPGwt5ItqAYMsWv7zw=="
+  "resolved" "https://registry.npmjs.org/@fullcalendar/interaction/-/interaction-6.1.10.tgz"
+  "version" "6.1.10"
+
+"@fullcalendar/list@~6.1.10":
+  "integrity" "sha512-WE4vuSUCzol4tJd0ZP0cNxeyRPaZcsVVYs2I3qdf3OZQkXwDCdSyWEz0Hluf+XZWcZXt21aEYKlxRjwUpQcf4Q=="
+  "resolved" "https://registry.npmjs.org/@fullcalendar/list/-/list-6.1.10.tgz"
+  "version" "6.1.10"
+
+"@fullcalendar/multimonth@~6.1.10":
+  "integrity" "sha512-mLGEgD+sv8rNfKphyOCWRQapX7/nAvHgQmDTjuy4STlhHsddCYVmFlsSgF373ph1tXh41wAJUVdNO/pDmCvUfA=="
+  "resolved" "https://registry.npmjs.org/@fullcalendar/multimonth/-/multimonth-6.1.10.tgz"
+  "version" "6.1.10"
+  dependencies:
+    "@fullcalendar/daygrid" "~6.1.10"
+
+"@fullcalendar/timegrid@~6.1.10":
+  "integrity" "sha512-hFKyQXJaPbNyq1reZmvkCmM64O99krHoIcJAbDS+dntCm3FzZUcDtAcRKIbMiantHrezCG/1MEYk3m9e3aKvIQ=="
+  "resolved" "https://registry.npmjs.org/@fullcalendar/timegrid/-/timegrid-6.1.10.tgz"
+  "version" "6.1.10"
+  dependencies:
+    "@fullcalendar/daygrid" "~6.1.10"
 
 "@fullcalendar/vue@^6.1.9":
   "integrity" "sha512-cJet86Zq0MhAn+VNO6QByZOmv4P8vgfkQJC9PkgMZAzLnVHMQGPgEpV492i5BGEXeLelmaAhynZvLv15C4XbPQ=="
@@ -3257,6 +3281,18 @@
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
+"fullcalendar@^6.1.10":
+  "integrity" "sha512-JVka6cf3s90vKY221Xa2V8sq42J9SRYxbUILy+o2mIAzG4BqCNLPLr9uBTDtAf7eK3bNhqohnlofRzVBX0BPMw=="
+  "resolved" "https://registry.npmjs.org/fullcalendar/-/fullcalendar-6.1.10.tgz"
+  "version" "6.1.10"
+  dependencies:
+    "@fullcalendar/core" "~6.1.10"
+    "@fullcalendar/daygrid" "~6.1.10"
+    "@fullcalendar/interaction" "~6.1.10"
+    "@fullcalendar/list" "~6.1.10"
+    "@fullcalendar/multimonth" "~6.1.10"
+    "@fullcalendar/timegrid" "~6.1.10"
+
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
   "resolved" "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
@@ -4062,10 +4098,10 @@
     "merge-stream" "^2.0.0"
     "supports-color" "^7.0.0"
 
-"jquery@^3.6", "jquery@1.9.1 - 3":
-  "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
-  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
-  "version" "3.6.0"
+"jquery@^3.7.1", "jquery@1.9.1 - 3":
+  "integrity" "sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.7.1.tgz"
+  "version" "3.7.1"
 
 "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
@@ -4551,6 +4587,11 @@
   "version" "0.5.5"
   dependencies:
     "minimist" "^1.2.5"
+
+"moment@^2.29.4":
+  "integrity" "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w=="
+  "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.4.tgz"
+  "version" "2.29.4"
 
 "ms@^2.1.1", "ms@2.1.2":
   "integrity" "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="

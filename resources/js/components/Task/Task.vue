@@ -182,7 +182,6 @@
 </template>
 
 <script>
-
 export default {
     name: "Dashboard",
     data() {
@@ -212,7 +211,7 @@ export default {
             editTaskModel: false,
             activeTooltip1: false,
             deleteDialog: false,
-            dataNotFound : false
+            dataNotFound : false,
         }
     },
     methods: {
@@ -249,6 +248,8 @@ export default {
                     this.errorNotification(error.response.data.message)
                     Loading.close()
                 });
+                
+                
         },
         updateTask() {
             let Loading = this.block("editTaskForm");
