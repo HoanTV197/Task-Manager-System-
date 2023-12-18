@@ -25,6 +25,13 @@
                                 <span class="nav-link-text">Calendar</span>
                             </router-link>
                         </li>
+                        
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/events">
+                                <i class="fas fa-calendar-alt text-primary"></i> &nbsp; &nbsp;
+                                <span class="nav-link-text">Events</span>
+                            </router-link>
+                        </li>
 
                         <li class="nav-item">
                             <router-link class="nav-link" to="/project">

@@ -24,6 +24,7 @@
 
 <!-- Argon JS -->
 <script src="{{asset('assets/js/argon.js?v=1.2.0')}}"></script>
+<script src="https://apis.google.com/js/api.js"></script>
 </body>
 
 </html>

@@ -2,26 +2,28 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('{any}',function (){
+
+Route::get('{any}', function () {
     return view('vue');
 })->where('any', '.*')->where('any', '^(?!api).*');
 
-Route::group(['prefix'=>'api/v1'],function (){
-    Route::post('/register',[\App\Http\Controllers\AuthController::class, 'registerAuth']);
-    Route::post('/login',[\App\Http\Controllers\AuthController::class, 'loginAuth']);
-    Route::get('/auth/check',[\App\Http\Controllers\AuthController::class, 'checkAuth']);
-    Route::get('/conform-mail/{key}',[\App\Http\Controllers\AuthController::class, 'conformMail']);
-    Route::post('/forgot_password',[\App\Http\Controllers\AuthController::class, 'forgotPassword']);
-    Route::get('/reset_password/{key}',[\App\Http\Controllers\AuthController::class, 'resetPasswordEmail']);
-    Route::post('/reset_password',[\App\Http\Controllers\AuthController::class, 'resetPassword']);
+Route::group(['prefix' => 'api/v1'], function () {
+    Route::post('/register', [\App\Http\Controllers\AuthController::class, 'registerAuth']);
+    Route::post('/login', [\App\Http\Controllers\AuthController::class, 'loginAuth']);
+    Route::get('/auth/check', [\App\Http\Controllers\AuthController::class, 'checkAuth']);
+    Route::get('/conform-mail/{key}', [\App\Http\Controllers\AuthController::class, 'conformMail']);
+    Route::post('/forgot_password', [\App\Http\Controllers\AuthController::class, 'forgotPassword']);
+    Route::get('/reset_password/{key}', [\App\Http\Controllers\AuthController::class, 'resetPasswordEmail']);
+    Route::post('/reset_password', [\App\Http\Controllers\AuthController::class, 'resetPassword']);
 });
-Route::group(['prefix'=>'api/v1','middleware'=>'auth'],function (){
-    Route::get('/get/user/info',[\App\Http\Controllers\UserController::class, 'getUserInfo']);
+//API Route
+Route::group(['prefix' => 'api/v1', 'middleware' => 'auth'], function () {
+    Route::get('/get/user/info', [\App\Http\Controllers\UserController::class, 'getUserInfo']);
     //Basic Info Navbar
     Route::get('/profile/info', [\App\Http\Controllers\UserController::class, 'getProfileInfo']);
 
     //Verify
-    Route::get('/sendVerifyMail',[\App\Http\Controllers\AuthController::class,'SendVerifyMail']);
+    Route::get('/sendVerifyMail', [\App\Http\Controllers\AuthController::class, 'SendVerifyMail']);
 
     //Dashboard
     Route::get('/count', [\App\Http\Controllers\DashboardController::class, 'getCount']);
@@ -40,9 +42,13 @@ Route::group(['prefix'=>'api/v1','middleware'=>'auth'],function (){
     Route::put('/update/task', [\App\Http\Controllers\TaskController::class, 'updateTask']);
     Route::delete('/delete/task/{id}', [\App\Http\Controllers\TaskController::class, 'deleteTask']);
 
+    //Events
+    Route::get('/events', [\App\Http\Controllers\EventController::class, 'getEvent']);
+    Route::post('/add/event', [\App\Http\Controllers\EventController::class, 'addEvent']);
+
     //Profile
     Route::get('/profile', [\App\Http\Controllers\UserController::class, 'getProfile']);
-    Route::post('/update/profile/pic',[\App\Http\Controllers\UserController::class, 'updateProfilePic']);
+    Route::post('/update/profile/pic', [\App\Http\Controllers\UserController::class, 'updateProfilePic']);
     Route::put('/update/profile', [\App\Http\Controllers\UserController::class, 'updateProfileInformation']);
 
     //setting
@@ -51,6 +57,9 @@ Route::group(['prefix'=>'api/v1','middleware'=>'auth'],function (){
     Route::post('/update/notification', [\App\Http\Controllers\UserController::class, 'updateNotification']);
 
     //Auth
-    Route::get('/logout',[\App\Http\Controllers\AuthController::class, 'logout']);
+    Route::get('/logout', [\App\Http\Controllers\AuthController::class, 'logout']);
 
+    //Google calendar
+    Route::get('/google/redirect', [GoogleController::class, 'redirect']);
+    Route::get('/google/callback', [GoogleController::class, 'callback']);
 });
