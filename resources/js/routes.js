@@ -66,6 +66,13 @@ export const routes = [
                 },
                 component:()=>import('./components/Calendar/Calendar'),
             },
+            {   path: '/events',
+                name: 'events',
+                meta: {
+                title: 'My Events | Vue Dashboard'
+                },
+                component:()=>import('./components/Events/Events'),
+            },
             {
                 path: '/project',
                 name: 'project',

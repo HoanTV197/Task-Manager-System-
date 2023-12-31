@@ -332,6 +332,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Sidebar"
 });
@@ -1047,6 +1054,27 @@ var render = function() {
                         _vm._v("    \n                                "),
                         _c("span", { staticClass: "nav-link-text" }, [
                           _vm._v("Calendar")
+                        ])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "nav-link", attrs: { to: "/events" } },
+                      [
+                        _c("i", {
+                          staticClass: "fas fa-calendar-alt text-primary"
+                        }),
+                        _vm._v("    \n                                "),
+                        _c("span", { staticClass: "nav-link-text" }, [
+                          _vm._v("Events")
                         ])
                       ]
                     )
