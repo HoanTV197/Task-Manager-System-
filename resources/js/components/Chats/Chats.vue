@@ -15,8 +15,9 @@
             <div class="card-body">
               <vue-chat-scroll class="chat-container">
                 <div v-for="(message, index) in messages" :key="index" class="message" :class="{ 'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot' }">
-                  {{ message.text }}
-                </div>
+  {{ message.text }}
+</div>
+
               </vue-chat-scroll>
             </div>
             <div class="card-footer">
@@ -42,6 +43,7 @@
 
 <script>
 import { VueChatScroll } from 'vue-chat-scroll';
+import axios from 'axios';
 
 export default {
   components: {
@@ -49,6 +51,8 @@ export default {
   },
   data() {
     return {
+      apiKey: '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',
+
       messages: [
         { text: 'Xin chào!', sender: 'bot' },
         { text: 'Chào bạn! Tôi là bot quản lý nhiệm vụ. Bạn cần giúp đỡ về điều gì?', sender: 'bot' },
@@ -103,7 +107,50 @@ export default {
         this.messages.push({ text: answer, sender: 'bot' });
       }, 1000);
     },
+
+    async sendMessage(isTopicQuestion = false) {
+    const userMessage = { text: this.newMessage, sender: 'user' };
+    this.messages.push(userMessage);
+    this.newMessage = '';
+
+    try {
+      let answer;
+
+      if (isTopicQuestion) {
+        answer = await this.getAnswerFromFAQ(userMessage.text);
+      } else {
+        // Gọi hàm ChatGPT để nhận câu trả lời
+        answer = await this.getAnswerFromChatGPT(userMessage.text);
+      }
+
+      this.sendBotMessage(answer);
+    } catch (error) {
+      console.error('Error during message processing:', error);
+      this.sendBotMessage('Xin lỗi, có lỗi xảy ra khi xử lý tin nhắn của bạn.');
+    }
   },
+
+  // Các phương thức khác ở đây...
+
+  async getAnswerFromChatGPT(question) {
+    try {
+      const response = await axios.post('https://api.chatgpt.com/v1/chat', {
+        messages: [{ role: 'system', content: 'You are a chatbot.' }, { role: 'user', content: question }],
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.apiKey}`,
+        },
+      });
+
+      return response.data.choices[0].message.content;
+    } catch (error) {
+      console.error('Error fetching response from ChatGPT:', error);
+      throw new Error('Xin lỗi, tôi không thể trả lời câu hỏi của bạn vào lúc này.');
+    }
+  },
+  },
+  
 };
 </script>
 

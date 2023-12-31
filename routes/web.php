@@ -60,6 +60,6 @@ Route::group(['prefix' => 'api/v1', 'middleware' => 'auth'], function () {
     Route::get('/logout', [\App\Http\Controllers\AuthController::class, 'logout']);
 
     //Google calendar
-    Route::get('/google/redirect', [GoogleController::class, 'redirect']);
-    Route::get('/google/callback', [GoogleController::class, 'callback']);
+    Route::get('/google/redirect', [\App\Http\Controllers\GoogleController::class, 'redirect']);
+    Route::get('/google/callback', [\App\Http\Controllers\GoogleController::class, 'callback']);
 });

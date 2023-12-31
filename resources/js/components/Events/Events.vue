@@ -4,7 +4,7 @@
       <div class="header bg-primary pb-6">
         <!-- ... other header elements ... -->
         <div class="col-lg-6 col-5 text-right">
-          <a href="#" class="btn btn-sm btn-neutral" @click="addEventModel = true">New Event</a>
+          <a href="#" class="btn btn-sm btn-neutral" style="margin-right: -400px;" @click="addEventModel = true">New Event</a>
         </div>
       </div>
   
@@ -152,11 +152,10 @@ methods: {
         Loading.close();
       });
   },
-  // Additional methods...
 },
     mounted() {
         this.getEvent();
-      // Initial data loading if necessary
+      
     }
   }
   </script>
