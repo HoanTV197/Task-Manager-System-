@@ -1,5 +1,5 @@
-## laravel + Vue js dashboard
-mini Project in Laravel and vue js. Laravel 8x + vue js Dashboard.Task management 
+## Laravel + Vue js dashboard
+Project in Laravel and vue js. Laravel 8x + vue js Dashboard.Task management 
 ## How to use
 1. git clone SSH `git clone git@github.com:HoanTV197/Task-Manager-System-.git`
 2. Copy `.env.example file to .env`
@@ -26,6 +26,26 @@ Key Feature of Project.
 
 `Note`: Please make sure Turn ON `Less secure app access` in your Google account without Email Not Send !.
 - Please Following:- `Manage your Google Account => Security => Less secure app access =>Trun ON`
+
+## DashBoard View
+
+![larave vue.js Dashboard View](public/git_image/vue-dashboard.png)
+![larave vue.js Dashboard View](public/git_image/db2.png)
+
+## Project View
+
+![larave vue.js Dashboard View](public/git_image/project.png)
+
+## Task View
+
+![larave vue.js Dashboard View](public/git_image/task.png)
+
+## FAQ View
+![larave vue.js Dashboard View](public/git_image/FAQ.png)
+
+## Profile View
+
+![larave vue.js Dashboard View](public/git_image/profile.png)
 
 ## Register View
 
